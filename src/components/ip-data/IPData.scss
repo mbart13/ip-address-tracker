@@ -1,0 +1,72 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.ip-data {
+  background: #fff;
+  width: 90%;
+  position: absolute;
+  z-index: 2;
+  top: -6.5rem;
+  left: 0;
+  right: 0;
+  border-radius: 0.9375rem;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  padding: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    max-width: 69.37rem;
+    flex-direction: row;
+    // justify-content: space-between;
+    top: -4rem;
+
+  }
+}
+
+.data-item {
+
+  @include breakpoint-up(medium) {
+    padding: 0 1.6rem;
+    text-align: left;
+    flex: 1 1 25%;
+  }
+
+}
+
+.data-item:not(:last-child) {
+  padding-bottom: .8rem;
+
+  @include breakpoint-up(medium) {
+    padding-bottom: 0;
+    border-right: 1px solid rgba($dark-grey-2, .15);
+  }
+}
+
+.key {
+  font-weight: bold;
+  font-size: .625rem;
+  letter-spacing: 1.5px;
+  color: rgba($dark-grey-1, 0.45);
+  text-transform: uppercase;
+
+  @include breakpoint-up(medium) {
+    margin-bottom: .5rem;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: .75rem;
+  }
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: normal;
+
+  @include breakpoint-up(large) {
+    font-size: 1.625rem;
+  }
+}

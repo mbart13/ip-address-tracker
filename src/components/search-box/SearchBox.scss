@@ -1,0 +1,53 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+@use 'sass:color';
+
+.search-box {
+  box-shadow: 0 3.125rem 3.125rem -1.5625rem rgba(0,0,0,.1);
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-up(medium) {
+    width: 50%;
+
+  }
+}
+
+input {
+  font-size: 1.125rem;
+  padding: .7rem 0 .7rem 1rem;
+  border-radius: .9375rem 0 0 .9375rem;
+  border: transparent;
+  flex: 1 1 auto;
+  min-width: 0;
+
+  @include breakpoint-up(medium) {
+    width: 100%;
+    flex: 0 1 auto;
+  }
+}
+
+input::placeholder {
+    color: color.scale($dark-grey-1, $lightness: 50%);
+    font-size: 1.125rem;
+}
+
+.btn {
+  background-color: black;
+  color: #fff;
+  border-radius: 0 .9375rem  .9375rem 0;
+  padding: 1.2rem;
+  border: transparent;
+  flex: 0 0 auto;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: color.scale(black, $lightness: 20%);
+}
+
+.icon {
+  height: .8rem;
+}

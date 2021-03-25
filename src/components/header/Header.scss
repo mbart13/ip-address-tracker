@@ -1,0 +1,19 @@
+@use '../../scss/variables';
+@use '../../scss/mixins' as *;
+
+header {
+  background: url('../../assets/images/pattern-bg.png') center/cover no-repeat;
+  text-align: center;
+  padding-bottom: 8rem;
+
+  @include breakpoint-up(medium) {
+    padding-bottom: 6rem;
+  }
+}
+
+.title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.625rem;
+  padding: 1rem 0;
+}
