@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { AppContext } from '../../App'
 import Map from '../map/Map'
 import IPData from '../ip-data/IPData'
-import './Results.scss'
 import Spinner from '../spinner/Spinner'
 
 
@@ -20,7 +19,7 @@ const Results = () => {
   }
 
   return (
-    <main>
+    <main style={{position: 'relative'}}>
       <IPData />
       <Map />
     </main>
