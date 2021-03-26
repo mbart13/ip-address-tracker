@@ -35,8 +35,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('resize', checkSize)
-    return () => window.removeEventListener('resize', checkSize)
-  })
+  }, [])
 
   useEffect(() => {
     if (targetRef.current) {
