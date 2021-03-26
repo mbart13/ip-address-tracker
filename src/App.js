@@ -1,15 +1,42 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import Header from './components/header/Header'
-import Map from './components/map/Map'
 import Results from './components/results/Results'
+import getIPData from './util/api'
 
 const AppContext = React.createContext()
 
 function App() {
   const targetRef = useRef();
-  const [searchTerm, setSearchTerm] = useState('')
+  const [size, setSize] = useState(window.innerWidth)
+  const [domain, setDomain] = useState('')
   const [height, setHeight] = useState(0)
+  const [results, setResults] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
+
+  const fetchData = (domain='') => {
+    setIsLoading(true)
+    setIsError(false)
+    getIPData(domain)
+      .then(data => {
+        setResults(data)
+        setIsLoading(false)
+      })
+      .catch(() => {
+        setIsError(true)
+        setIsLoading(false)
+      })
+  }
+
+  const checkSize = () => {
+    setSize(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', checkSize)
+    return () => window.removeEventListener('resize', checkSize)
+  })
 
   useEffect(() => {
     if (targetRef.current) {
@@ -17,11 +44,25 @@ function App() {
         targetRef.current.offsetHeight
       );
     }
-  },[]);
+  }, [size]);
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const handleChange = (e) => {
+    setDomain(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    fetchData(domain)
+  }
 
   return (
     <>
-      <AppContext.Provider value={{ height }}>
+      <AppContext.Provider
+          value={{ height, results, isLoading, handleSubmit, handleChange, isError }}>
         <Header ref={targetRef} />
         <Results />
       </AppContext.Provider>
@@ -31,4 +72,4 @@ function App() {
 }
 
 export { AppContext };
-export default App; ;
+export default App;

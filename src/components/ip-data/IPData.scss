@@ -13,16 +13,15 @@
   margin: 0 auto;
   list-style: none;
   text-align: center;
-  padding: 1.6rem 0;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
 
   @include breakpoint-up(medium) {
     max-width: 69.37rem;
     flex-direction: row;
-    // justify-content: space-between;
     top: -4rem;
-
+    padding: 1.6rem 0;
   }
 }
 

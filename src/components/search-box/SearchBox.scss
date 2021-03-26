@@ -11,7 +11,10 @@
 
   @include breakpoint-up(medium) {
     width: 50%;
+  }
 
+  @include breakpoint-up(large) {
+    width: 40%;
   }
 }
 
