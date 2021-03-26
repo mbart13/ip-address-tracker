@@ -7,7 +7,7 @@ import getIPData from './util/api'
 const AppContext = React.createContext()
 
 function App() {
-  const targetRef = useRef();
+  const targetRef = useRef()
   const [size, setSize] = useState(window.innerWidth)
   const [domain, setDomain] = useState('')
   const [height, setHeight] = useState(0)
@@ -29,12 +29,10 @@ function App() {
       })
   }
 
-  const checkSize = () => {
-    setSize(window.innerWidth)
-  }
-
   useEffect(() => {
-    window.addEventListener('resize', checkSize)
+    window.addEventListener('resize', () => {
+      setSize(window.innerWidth)
+    })
   }, [])
 
   useEffect(() => {

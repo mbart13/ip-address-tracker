@@ -10,14 +10,12 @@ const Results = () => {
   const { isLoading, isError } = useContext(AppContext)
 
   if (isLoading) {
-    return <main><Spinner /></main>
+    return <Spinner />
   }
 
   if (isError) {
     return (
-      <main>
-        <h1 style={{textAlign: 'center'}}>No results found, please try again</h1>
-      </main>
+      <h1 style={{textAlign: 'center'}}>No results found, please try again</h1>
     )
   }
 
