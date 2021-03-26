@@ -5,6 +5,7 @@ import IPData from '../ip-data/IPData'
 import './Results.scss'
 import Spinner from '../spinner/Spinner'
 
+
 const Results = () => {
   const { isLoading, isError } = useContext(AppContext)
 
