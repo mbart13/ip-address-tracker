@@ -23,11 +23,8 @@ const Map = () => {
 
 
   return (
-    <section>
-      <div style={{ width: '100%', height: `calc(100vh - ${height}px)`}} id="map">
-      </div>
-    </section>
-
+    <div style={{ width: '100%', height: `calc(100vh - ${height}px)`}} id="map">
+    </div>
   )
 }
 

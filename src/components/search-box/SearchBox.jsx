@@ -14,7 +14,7 @@ const SearchBox = () => {
         placeholder="Search for any IP address or domain"
         onChange={handleChange}
       />
-      <button className="btn" type="submit">
+      <button className="btn" type="submit" aria-label="submit">
         <img className="icon" src={arrow} alt="" aria-hidden="true"/>
       </button>
     </form>
