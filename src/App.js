@@ -8,7 +8,6 @@ const AppContext = React.createContext()
 
 function App() {
   const targetRef = useRef()
-  const [size, setSize] = useState(window.innerWidth)
   const [domain, setDomain] = useState('')
   const [height, setHeight] = useState(0)
   const [results, setResults] = useState(null)
@@ -30,18 +29,12 @@ function App() {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      setSize(window.innerWidth)
-    })
-  }, [])
-
-  useEffect(() => {
     if (targetRef.current) {
       setHeight(
         targetRef.current.offsetHeight
       );
     }
-  }, [size]);
+  }, []);
 
   useEffect(() => {
     fetchData()

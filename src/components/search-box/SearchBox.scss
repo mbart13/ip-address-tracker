@@ -16,6 +16,10 @@
   @include breakpoint-up(large) {
     width: 40%;
   }
+
+  @include breakpoint-up(extra-large) {
+    width: 30%;
+  }
 }
 
 input {

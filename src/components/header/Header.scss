@@ -4,11 +4,7 @@
 header {
   background: url('../../assets/images/pattern-bg.png') center/cover no-repeat;
   text-align: center;
-  padding-bottom: 8rem;
-
-  @include breakpoint-up(medium) {
-    padding-bottom: 6rem;
-  }
+  padding-bottom: 6.5rem;
 }
 
 .title {
