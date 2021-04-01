@@ -6,11 +6,12 @@ import { AppContext } from '../../App'
 const Map = () => {
   const { height, results } = useContext(AppContext)
   const { lat, lng } = results.location
+  const { REACT_APP_ACCESS_TOKEN } = process.env;
 
   useEffect(() => {
     const position = [lat, lng]
     const map = L.map('map').setView(position, 12);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWJhcnQxMyIsImEiOiJja21tNDJic2UxaDAxMndrNWh3bGlyb3E3In0.VoxqmgavdRfP0DRPxpvidA', {
+    L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${REACT_APP_ACCESS_TOKEN}`, {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox/streets-v11',
@@ -19,6 +20,7 @@ const Map = () => {
     }).addTo(map);
 
     L.marker(position).addTo(map);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, lng])
 
 
