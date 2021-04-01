@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const { API_KEY } = process.env;
-const baseUrl = `https://geo.ipify.org/api/v1?apiKey=${API_KEY}`
+const { REACT_APP_API_KEY } = process.env;
+const baseUrl = `https://geo.ipify.org/api/v1?apiKey=${REACT_APP_API_KEY}`
 
 const getIPData = async(domain='') => {
   const request = await axios.get(`${baseUrl}&domain=${domain}`)
