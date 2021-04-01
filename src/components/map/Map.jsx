@@ -10,7 +10,7 @@ const Map = () => {
   useEffect(() => {
     const position = [lat, lng]
     const map = L.map('map').setView(position, 12);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWJhcnQxMyIsImEiOiJja215eDB0OXowODl1MndtYm1iZ2p2cnc2In0.7hkqsgIE1VcAjgPe__1VoQ', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWJhcnQxMyIsImEiOiJja21tNDJic2UxaDAxMndrNWh3bGlyb3E3In0.VoxqmgavdRfP0DRPxpvidA', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox/streets-v11',
