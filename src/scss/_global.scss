@@ -9,10 +9,15 @@
 }
 
 body {
-  min-height: 100vh;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
   font-family: 'Rubik', sans-serif;
   color: $dark-grey-1;
-  line-height: 1.5;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
 }
 
 img,
@@ -26,4 +31,15 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
