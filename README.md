@@ -37,10 +37,10 @@ Users should be able to:
 - React with Context API and hooks
 - Geolocation API by IPify
 - LeafletJS for generating map
-- flexbox
+- Flexbox
 - Sass
 - Mobile-first workflow
 
 
-In this project I tried to organize folder structure a little better, but still I'm not sure if this is correct as there are so many approaches in react projects.
+In this project I tried to organize folder structure a little better, but still I'm not sure if this is correct as there are so many approaches in react projects.  
 Initially I wanted to use react-leaflet library for map generation, but it didn't work as I expected, so next time it would be better to read documentation first.
