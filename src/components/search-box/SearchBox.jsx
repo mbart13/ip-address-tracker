@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './SearchBox.scss'
-import arrow from '../../assets/images/icon-arrow.svg'
-import { AppContext } from '../../App'
+import arrow from 'assets/images/icon-arrow.svg'
+import { AppContext } from 'App'
 
 const SearchBox = () => {
   const { handleSubmit, handleChange } = useContext(AppContext)

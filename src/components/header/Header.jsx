@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBox from '../search-box/SearchBox';
+import SearchBox from 'components/search-box/SearchBox';
 import './Header.scss';
 
 const Header = React.forwardRef((props, ref) => {

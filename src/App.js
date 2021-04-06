@@ -4,10 +4,11 @@ import Header from './components/header/Header'
 import Results from './components/results/Results'
 import getIPData from './util/api'
 
+// @ts-ignore
 const AppContext = React.createContext()
 
 function App() {
-  const targetRef = useRef()
+  const targetRef = useRef(null)
   const [domain, setDomain] = useState('')
   const [height, setHeight] = useState(0)
   const [results, setResults] = useState(null)

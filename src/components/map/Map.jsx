@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import L from 'leaflet'
 import './Map.scss'
-import { AppContext } from '../../App'
+import { AppContext } from 'App'
 
 const Map = () => {
   const { height, results } = useContext(AppContext)

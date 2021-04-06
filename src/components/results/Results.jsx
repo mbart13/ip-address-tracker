@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../App'
-import Map from '../map/Map'
-import IPData from '../ip-data/IPData'
-import Spinner from '../spinner/Spinner'
+import Map from 'components/map/Map'
+import IPData from 'components/ip-data/IPData'
+import Spinner from 'components/spinner/Spinner'
 
 
 const Results = () => {
