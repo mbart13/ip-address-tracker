@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react'
 
 import Header from './components/header/Header'
 import Results from './components/results/Results'
@@ -62,5 +62,5 @@ function App() {
   );
 }
 
-export { AppContext };
-export default App;
+export { AppContext, App }
+
